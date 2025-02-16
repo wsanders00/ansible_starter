@@ -1,0 +1,4 @@
+---
+ansible_host: IP/FQDN here
+
+# any conditional values here...

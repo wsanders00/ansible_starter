@@ -1,0 +1,6 @@
+---
+- name: Install {{ packages_all }}
+  ansible.builtin.dnf:
+    name: "{{ packages_all }}"
+    update_cache: yes
+    state: latest

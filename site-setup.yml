@@ -1,0 +1,24 @@
+---
+
+- name: Initial Bootstrap
+  hosts: all
+  gather_facts: false
+  tasks:
+    - name: Bootstrap
+      ansible.builtin.import_role:
+        name: shared_roles/bootstrap
+      vars:
+      tags:
+        - never
+        - bootstrap
+
+- name: Setup
+  hosts: all
+  become: true
+  remote_user: "{{ ansible_user }}"
+  tasks:
+    - name: Install packages
+      ansible.builtin.import_role:
+        name: shared_roles/packages
+      tags:
+        - packages

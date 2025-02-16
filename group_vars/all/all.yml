@@ -1,0 +1,16 @@
+---
+# Variables at the group level
+# e.g.
+set_timezone: "America/New_York"
+set_ntp: "time.google.com"
+
+# Sample list
+packages_all:
+  - util-linux-user
+  - nano
+  - zsh
+  - git
+  - git-lfs
+  - cronie
+  - wget
+  - epel-release

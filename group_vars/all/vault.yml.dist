@@ -1,0 +1,6 @@
+# Vault variables at the group level that should be encrypted. 
+
+# e.g. Ansible user 
+ansible_user: "something"
+ansible_password: "someSecurePassword"
+ansible_key_file: "path/pub/key"
